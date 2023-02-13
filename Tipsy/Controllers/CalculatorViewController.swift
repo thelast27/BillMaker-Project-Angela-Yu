@@ -16,7 +16,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var spritNumberButton: UILabel!
     
-    var tip = 0.10
+  private var tip = 0.10
     
     @IBAction func tipPctChanged(_ sender: UIButton) {
         
@@ -33,6 +33,7 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        spritNumberButton.text = String(Int(sender.value))
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
